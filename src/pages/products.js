@@ -21,7 +21,7 @@ class Products extends Component {
     const allProducts = this.props.data.allContentfulProduct.edges
     const products =
       netlifyIdentity.currentUser() !== null
-        ? allProducs
+        ? allProducts
         : allProducts.filter(({ node: product }) => !product.private)
     this.setState({ products })
   }
